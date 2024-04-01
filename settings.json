@@ -1,0 +1,189 @@
+{
+    "editor.fontFamily": "'JetBrains Mono', 'Fira Code', 'Courier New', monospace",
+    "editor.fontLigatures": true,
+
+    //EDITOR
+    "workbench.startupEditor": "none",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.lineHeight": 1.8,
+    // "editor.rulers": [80, 120],
+    "editor.renderLineHighlight": "gutter",
+    "editor.semanticHighlighting.enabled": false,
+    "editor.minimap.enabled": false ,
+    "editor.lineNumbers": "relative",
+    "editor.linkedEditing": true,
+    "breadcrumbs.filePath": "off",
+    "files.trimTrailingWhitespace": true,
+    "[markdown]": {
+        "files.trimTrailingWhitespace": false
+    },
+    "window.zoomLevel": 0,
+    // "editor.scrollbar.vertical": "hidden",
+    // "editor.scrollbar.horizontal": "hidden",
+
+    //LAYOUT
+    "workbench.editor.labelFormat": "short",
+    // "workbench.statusBar.visible": false,
+    "workbench.activityBar.location": "top",
+    "workbench.layoutControl.enabled": false,
+
+    // "workbench.settings.openDefaultKeybindings": true,
+    "workbench.editor.editorActionsLocation": "hidden",
+    "explorer.compactFolders": false,
+    "window.commandCenter": false,
+    "explorer.fileNesting.enabled": true,
+
+    // APC
+    "apc.activityBar": {
+        "position": "bottom",
+        "hideSettings": true,
+        "size": 28
+    },
+    "apc.electron": {
+        "titleBarStyle": "hiddenInset",
+        "trafficLightPosition": {
+        "x": 12,
+        "y": 10
+        }
+    },
+    "apc.font.family":  "'JetBrains Mono','Fira Code', 'Courier New', monospace",
+    "apc.monospace.font.family": "'JetBrains Mono','Fira Code', 'Courier New', monospace",
+    "apc.statusBar": {
+        "position": "editor-bottom",
+        // "position": "bottom",
+        "height": 28,
+        "fontSize": 12
+    },
+
+    "apc.stylesheet": {
+        "body": {
+            ".title-label > h2": "display: none",
+            ".sidebar > .composite": "height: 12px !important",
+            ".title-label": "display: none !important",
+            ".title-actions": "display: none !important",
+            ".tabs-and-actions-container > .editor-actions": "display: none !important",
+            ".titlebar-center": "display: none !important",
+            ".titlebar-right": "display: none !important",
+            ".inline-tabs-placeholder": "display: none !important",
+            ".split-view-view .visible": "background-color: #110f17 !important",
+        }
+    },
+
+    //VIM
+    "vim.leader": "<Space>",
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+    {
+        "before": ["j", "j"],
+        "after": ["<Esc>"]
+    }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // NAVIGATION
+        // switch b/w buffers
+        { "before": ["<S-h>"], "commands": [":bprevious"] },
+        { "before": ["<S-l>"], "commands": [":bnext"] },
+
+        // splits
+        { "before": ["leader", "v"], "commands": [":vsplit"] },
+        { "before": ["leader", "s"], "commands": [":split"] },
+
+        // panes
+        {
+        "before": ["leader", "h"],
+        "commands": ["workbench.action.focusLeftGroup"]
+        },
+        {
+        "before": ["leader", "j"],
+        "commands": ["workbench.action.focusBelowGroup"]
+        },
+        {
+        "before": ["leader", "k"],
+        "commands": ["workbench.action.focusAboveGroup"]
+        },
+        {
+        "before": ["leader", "l"],
+        "commands": ["workbench.action.focusRightGroup"]
+        },
+        // NICE TO HAVE
+        { "before": ["leader", "w"], "commands": [":w!"] },
+        { "before": ["leader", "q"], "commands": [":q!"] },
+        { "before": ["leader", "x"], "commands": [":x!"] },
+        {
+        "before": ["[", "d"],
+        "commands": ["editor.action.marker.prev"]
+        },
+        {
+        "before": ["]", "d"],
+        "commands": ["editor.action.marker.next"]
+        },
+        {
+        "before": ["<leader>", "c", "a"],
+        "commands": ["editor.action.quickFix"]
+        },
+        { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
+        { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
+        {
+        "before": ["g", "h"],
+        "commands": ["editor.action.showDefinitionPreviewHover"]
+        },
+        {
+        "before": ["leader", "n", "e"],
+        "commands": ["workbench.explorer.fileView.focus"]
+        }
+    ],
+
+    "vim.visualModeKeyBindings": [
+        // Stay in visual mode while indenting
+        { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+        { "before": [">"], "commands": ["editor.action.indentLines"] },
+        // Move selected lines while staying in visual mode
+        { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+        { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+        // toggle comment selection
+        { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
+    ],
+
+
+
+
+    // Toggle excluded files
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/node_modules": true,
+        "**/.next": true,
+        "**/.husky": true,
+        "**/drizzle": true,
+        "**/dist": true,
+        "**/.todo.md": true,
+        "**/.vscode": true,
+        "**/.eslintrc.cjs": true,
+        "**/.editorconfig": true,
+        "**/.gitignore": true,
+        "**/.lintstagedrc.mjs": true,
+        "**/.markdownlint.json": true,
+        "**/.markdownlintignore": true,
+        "**/.prettierignore": true,
+        "**/bun.lockb": true,
+        "**/cspell.json": true,
+        "**/package-lock.json": true,
+        "**/pnpm-lock.yaml": true,
+        "**/next-env.d.ts": true,
+        "**/postcss.config.cjs": true,
+        "**/prettier.config.js": true,
+        "**/README.md": true,
+        "**/next.config.js": true,
+        "**/tailwind.config.ts": true,
+        "**/drizzle.config.ts": true,
+        "**/migrate.ts": true,
+        "**/.env.example": true
+    },
+    "workbench.iconTheme": "catppuccin-mocha",
+    "workbench.colorTheme": "Vim Deep Dark",
+
+}
