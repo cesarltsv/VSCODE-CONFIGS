@@ -10,14 +10,13 @@
     "editor.renderLineHighlight": "gutter",
     "editor.semanticHighlighting.enabled": false,
     "editor.minimap.enabled": false ,
-    "editor.lineNumbers": "relative",
+    "editor.lineNumbers": "on",
     "editor.linkedEditing": true,
     "breadcrumbs.filePath": "off",
     "files.trimTrailingWhitespace": true,
     "[markdown]": {
         "files.trimTrailingWhitespace": false
     },
-    "window.zoomLevel": 0,
     // "editor.scrollbar.vertical": "hidden",
     // "editor.scrollbar.horizontal": "hidden",
 
@@ -183,7 +182,38 @@
         "**/migrate.ts": true,
         "**/.env.example": true
     },
-    "workbench.iconTheme": "catppuccin-mocha",
-    "workbench.colorTheme": "Vim Deep Dark",
+
+    //GIT LENS
+    "gitlens.blame.line.enabled": false,// was working in previous versions
+    "gitlens.currentLine.enabled": false,// in modern version
+    "gitlens.codeLens.authors.enabled": false,
+    "gitlens.codeLens.recentChange.enabled": false,
+
+    "editor.guides.bracketPairsHorizontal": false,
+    "editor.guides.bracketPairs": false,
+    "editor.guides.indentation": false,
+
+    "settings.cycle": [{
+        "id": "lineNumbers",
+        "values":[
+            {
+                "editor.lineNumbers": "off",
+                "editor.folding": false,
+                "editor.glyphMargin": false
+            },
+            {
+                "editor.lineNumbers": "on",
+                "editor.folding": true,
+                "editor.glyphMargin": true
+
+            }
+        ]
+    }
+],
+"editor.folding": true,
+"editor.glyphMargin": true,
+"workbench.colorTheme": "Vim Deep Dark",
+"workbench.iconTheme": "gruvbox-icon-theme",
+
 
 }

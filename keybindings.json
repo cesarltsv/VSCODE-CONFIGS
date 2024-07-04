@@ -154,6 +154,10 @@
       "command": "workbench.action.terminal.focusPrevious",
       "when": "terminalFocus"
     },
+    {
+      "key": "ctrl+shift+l",
+      "command": "settings.cycle.lineNumbers",
+    }
 
 
 //   {
