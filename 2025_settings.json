@@ -1,0 +1,119 @@
+{
+  //EDITOR
+
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.tabSize": 2,
+  "editor.renderWhitespace": "none",
+  //EXPLORER
+  "explorer.compactFolders": false,
+  "explorer.decorations.badges": false,
+  "git.decorations.enabled": false,
+  "workbench.colorTheme": "Saklash Theme (Plain)",
+  // "workbench.activityBar.location": "hidden",
+  "workbench.startupEditor": "none",
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.tree.indent": 8,
+  "workbench.tree.enableStickySchroll": false,
+  "window.zoomLevel": 0,
+
+  "editor.fontSize": 14,
+  "editor.lineHeight": 2,
+  "editor.colorDecorators": false,
+  "editor.links": false,
+  "editor.renderLineHighlight": "none",
+  "editor.lineNumbers": "relative",
+  "editor.minimap.enabled": false,
+  "editor.stickyScroll.enabled": false,
+  "editor.semanticHighlighting.enabled": false,
+  "workbench.tree.enableStickyScroll": false,
+  "workbench.editor.limit.value": 5,
+  "workbench.editor.labelFormat": "short",
+  "breadcrumbs.enabled": false,
+  "github.copilot.editor.enableAutoCompletions": false,
+
+  "custom-ui-style.stylesheet": {
+    ".monaco-workbench .part.editor > .content .editor-group-container>.title .monaco-icon-label": "padding-left: 60px",
+    ".quick-input-widget.show-file-icons": "box-shadow: node; !important"
+  },
+  "custom-ui-style.electron": {
+    "titleBarStyle": "hiddenInset",
+    "trafficLightPosition": {
+      "x": 20,
+      "y": 16
+    }
+  },
+
+  "vim.leader": "<Space>",
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // NAVIGATION
+    // switch b/w buffers
+    { "before": ["<S-h>"], "commands": [":bprevious"] },
+    { "before": ["<S-l>"], "commands": [":bnext"] },
+
+    // splits
+    { "before": ["leader", "v"], "commands": [":vsplit"] },
+    { "before": ["leader", "s"], "commands": [":split"] },
+    // panes
+    {
+      "before": ["leader", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["leader", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["leader", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["leader", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+    // NICE TO HAVE
+    { "before": ["leader", "w"], "commands": [":w!"] },
+    { "before": ["leader", "q"], "commands": [":q!"] },
+    { "before": ["leader", "x"], "commands": [":x!"] },
+    {
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.prev"]
+    },
+    {
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.next"]
+    },
+    {
+      "before": ["<leader>", "c", "a"],
+      "commands": ["editor.action.quickFix"]
+    },
+    { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
+    { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
+    {
+      "before": ["g", "h"],
+      "commands": ["editor.action.showDefinitionPreviewHover"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    // Stay in visual mode while indenting
+    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+    { "before": [">"], "commands": ["editor.action.indentLines"] },
+    // Move selected lines while staying in visual mode
+    { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+    // toggle comment selection
+    { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
+  ],
+  "workbench.activityBar.location": "top",
+  "workbench.iconTheme": "vscode-icons",
+  "rust-analyzer.cargo.features": ["proc-macro"]
+}
